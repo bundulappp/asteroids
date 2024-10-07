@@ -22,6 +22,14 @@ if __name__ == "__main__":
             if event.type == pygame.QUIT:
                 running = False
 
+        keys = pygame.key.get_pressed()
+
+        if keys[pygame.K_a]:
+            player.update(-dt)
+
+        if keys[pygame.K_d]:
+            player.update(dt)
+
         screen.fill('black')
         player.draw(screen)
          # flip() the display to put your work on screen
